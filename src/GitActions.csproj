@@ -7,5 +7,6 @@
   </PropertyGroup>
     <ItemGroup>
 	    <Content Include="wwwroot/**" CopyToPublishDirectory="PreserveNewest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder);@(Content)" />
+		<Content Update="wwwroot/**" ExcludeFromSingleFile="true" />
     </ItemGroup>
 </Project>
