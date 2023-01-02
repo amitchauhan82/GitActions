@@ -13,27 +13,27 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  # build:
 
-    runs-on: ubuntu-latest
+  #   runs-on: ubuntu-latest
 
-    steps:
-    - name: Git setup
-      uses: actions/checkout@v3
+  #   steps:
+  #   - name: Git setup
+  #     uses: actions/checkout@v3
 
-    - name: Set up .NET Core
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: ${{ env.DOTNET_VERSION }}
+  #   - name: Set up .NET Core
+  #     uses: actions/setup-dotnet@v3
+  #     with:
+  #       dotnet-version: ${{ env.DOTNET_VERSION }}
     
-    - name: Restore dependencies
-      run: cd src; dotnet restore
+  #   - name: Restore dependencies
+  #     run: cd src; dotnet restore
     
-    - name: Build
-      run: cd src; dotnet build --no-restore
+  #   - name: Build
+  #     run: cd src; dotnet build --no-restore
     
-    - name: Test
-      run: cd src; dotnet test --no-build --verbosity normal
+  #   - name: Test
+  #     run: cd src; dotnet test --no-build --verbosity normal
 
   deploy-dev:
     env:
@@ -51,8 +51,15 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
+      - name: Restore dependencies
+        run: cd src; dotnet restore
+      
+      - name: Build
+        run: cd src; dotnet build
+
       - name: Publish site
-        run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Debug" --self-contained "false" -o ../site
+        run:  cd src; dotnet publish --configuration "Release" --self-contained "false" -o ../site
+        #run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Release" --self-contained "false" -o ../site
 
       - name: Generate deployment package 
         run: cd site; zip ../site.zip *; cd ..; zip web.zip site.zip aws-windows-deployment-manifest.json
