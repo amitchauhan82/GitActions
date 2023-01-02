@@ -58,7 +58,7 @@ jobs:
         run: cd src; dotnet build
 
       - name: Publish site
-        run:  cd src; dotnet publish --configuration "Release" --self-contained "false" -o ../site
+        run:  cd src; dotnet publish --configuration "Release" -f net6.0 -r win10-x64 --self-contained "false" -o ../site
         #run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Release" --self-contained "false" -o ../site
 
       - name: Generate deployment package 
