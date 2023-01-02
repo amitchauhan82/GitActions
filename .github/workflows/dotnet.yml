@@ -52,7 +52,7 @@ jobs:
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Publish site
-        run:  cd src; dotnet restore; dotnet build; dotnet publish -r win10-x64 --configuration "Release" --self-contained "true" -o ../site
+        run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Release" --self-contained "false" -o ../site
 
       - name: Generate deployment package 
         run: cd site; zip ../site.zip *; cd ..; zip web.zip site.zip aws-windows-deployment-manifest.json
