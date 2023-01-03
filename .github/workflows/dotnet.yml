@@ -62,7 +62,7 @@ jobs:
         #run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Release" --self-contained "false" -o ../site
 
       - name: Generate site.zip
-        run: Compress-Archive -Path ".\site" "site.zip"
+        run: Compress-Archive -Path ".\site\*" "site.zip"
 
       - name: Generate web.zip
         run: Compress-Archive -Path ".\site.zip", "aws-windows-deployment-manifest.json" "web.zip"
