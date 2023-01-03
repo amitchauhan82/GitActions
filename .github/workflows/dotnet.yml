@@ -40,7 +40,7 @@ jobs:
       AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
     #needs: build
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     environment: development
     steps:
       - name: Git setup
@@ -61,8 +61,11 @@ jobs:
         run:  cd src; dotnet publish --configuration "Release" -f net6.0 -r win10-x64 --self-contained "false" -o ../site
         #run:  cd src; dotnet restore; dotnet build; dotnet publish --configuration "Release" --self-contained "false" -o ../site
 
-      - name: Generate deployment package 
-        run: cd site; zip ../site.zip *; cd ..; zip web.zip site.zip aws-windows-deployment-manifest.json
+      - name: Generate site.zip
+        run: Compress-Archive -Path ".\site" "site.zip"
+
+      - name: Generate web.zip
+        run: Compress-Archive -Path ".\site", "aws-windows-deployment-manifest.json" "web.zip"
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
