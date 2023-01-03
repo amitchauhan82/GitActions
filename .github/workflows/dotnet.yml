@@ -65,7 +65,7 @@ jobs:
         run: Compress-Archive -Path ".\site" "site.zip"
 
       - name: Generate web.zip
-        run: Compress-Archive -Path ".\site", "aws-windows-deployment-manifest.json" "web.zip"
+        run: Compress-Archive -Path ".\site.zip", "aws-windows-deployment-manifest.json" "web.zip"
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
