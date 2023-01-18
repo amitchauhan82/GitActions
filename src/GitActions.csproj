@@ -8,5 +8,11 @@
     <ItemGroup>
 	    <Content Include="wwwroot/**" CopyToPublishDirectory="PreserveNewest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder);@(Content)" />
 		<Content Update="wwwroot/**" ExcludeFromSingleFile="true" />
+
+		<Content Include="App_Data/**" CopyToPublishDirectory="PreserveNewest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder);@(Content)" />
+		<Content Update="App_Data/**" ExcludeFromSingleFile="true" />
+
+		<Content Include="PDFHtml/**" CopyToPublishDirectory="PreserveNewest" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder);@(Content)" />
+		<Content Update="PDFHtml/**" ExcludeFromSingleFile="true" />
     </ItemGroup>
 </Project>

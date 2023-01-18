@@ -1,0 +1,62 @@
+﻿
+Australian Credit Licensee Name - text - Australian Credit Licensee Name - 13813280834585
+
+Australian Credit Licensee Number - Australian Credit Licensee Number - 13813283465625
+
+Please list the representatives to be on the policy - Representatives List on the policy - 13813302907161
+
+Payment Amount - 13959304791065
+
+EncryptedTicketId - 13979395653273
+
+Declaration Radio 1 - Are you or any partner, Director or Principal aware of any circumstance(s) which may give rise to a complaint, claim or of
+any complaint(s), claim(s) or potential claim(s) made in the past or being made against any of the entity(ies) ? - 13813750449177
+
+Declaration Radio 1 Text - Declaration Question 1 Details - 13813814240025
+
+Declaration Radio 2 - Has/Have you or the entity(ies) sustained any loss through the fraud or dishonesty of any person? Does/Do the entity(ies)
+know of any fraud or dishonesty at any time of any past or present Partner, Director, Principal or Employee? - 13813869063705
+
+Declaration Radio 2 Text - Declaration Question 2 Details - 13813890057113
+
+Declaration Radio 3 - Has/Have you or the entity(ies) or any past or present Partner, Director or Principal of the Entity(ies) 
+ever been the subject of disciplinary proceedings or investigation by any professional organisation,
+lender, industry association ? - 13813895049881
+
+Declaration Radio 3 Text - Declaration Question 3 Details - 13813931785881
+
+Declaration Radio 4 - Has/Have you or the entity(ies) or any past or present Partner, Director or Principal of the 
+Entity(ies) within Australia or overseas been the subject of administrative
+, civil, criminal proceedings or enforcement action? - 13813967371929
+
+Declaration Radio 4 Text - Declaration Question 4 Details - 13813969236889
+
+Declaration Radio 5 - Has/Have your or the entity(ies) or any past or present, Directors or Principle been associated with 
+any entity that has gone into voluntary liquidation ? - 13813991307929
+Declaration Radio 5 Text - Declaration Question 5 Details - 13814009982745
+
+Expected Gross Revenue - 13814011279897
+
+Mortgage Broking % - 13814013251865
+
+Personal Loan and Consumer Asset Finance Broking % - 13814014217625
+
+Commercial Loan Broking % - 13814015525401
+
+Other - Name - 13814050627225
+
+Other % - 13814051718297
+
+Preferred Payment Method - Dropdown - Preferred Payment Method - 13814154714393
+
+Accept Terms & Conditions - 13814188435865
+
+Entity / Business Name/s - 13814189448857
+
+Signature ? - 13814191021849
+
+Name of Signatory - 13814190229657
+
+Date - 13814209440537
+
+
