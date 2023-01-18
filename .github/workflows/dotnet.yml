@@ -43,10 +43,10 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID:  ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY:  ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}     
+      BRANCH_NAME: ${{ github.event.pull_request.base.ref }} #${{ github.head_ref || github.ref_name }}     
     runs-on: windows-latest
     environment: development
-    if: (github.head_ref || github.ref_name) == 'dev'
+    if: (github.event.pull_request.base.ref) == 'dev'
     steps:
       - name: Print Branch Name
         run: echo ${{env.BRANCH_NAME}}
