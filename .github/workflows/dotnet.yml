@@ -92,7 +92,7 @@ jobs:
       BRANCH_NAME: ${{ github.head_ref || github.ref_name }}     
     runs-on: windows-latest
     environment: prod
-    if: (github.head_ref || github.ref_name) == 'master'
+    #if: (github.head_ref || github.ref_name) == 'master'
     steps:
       - name: Print Branch Name
         run: echo ${{env.BRANCH_NAME}}
