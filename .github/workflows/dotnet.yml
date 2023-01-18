@@ -7,13 +7,14 @@ env:
   DOTNET_VERSION: '6.0.404'
 
 on:
-  push:
-    branches: 
-      - 'dev'
+  # push:
+  #   branches: 
+  #     - 'dev'
   pull_request:
     branches: 
       - 'releases/*'
       - 'master'
+      - 'dev'
 
 jobs:
   # build:
