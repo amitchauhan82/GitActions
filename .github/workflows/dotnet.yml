@@ -93,7 +93,7 @@ jobs:
       BRANCH_NAME: ${{ github.event.pull_request.base.ref }}
     runs-on: windows-latest
     environment: prod
-    if: (github.event.pull_request.base.ref) == 'master'
+    if: ((github.event.pull_request.base.ref) == 'master' || (github.event.pull_request.base.ref) == 'releases/*') 
     steps:
       - name: Print Branch Name
         run: echo ${{env.BRANCH_NAME}}
