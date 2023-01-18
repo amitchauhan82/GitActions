@@ -90,7 +90,7 @@ jobs:
     environment: prod
     steps:
       - name: Print
-        run: echo  ${GITHUB_REF##*/}
+        run: echo  ${github.ref} ${github.head_ref}
 
       - name: Print env variables
         run: echo env
